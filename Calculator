@@ -1,0 +1,62 @@
+/**
+ * Calculator
+ */
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        char operator;
+        Double[] number = new Double[2], result;
+        int nummerL = number.length;
+        int zaehler = 1;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Choose an operator: +, -, * or /");
+        operator = input.next().charAt(0);
+
+        for(int i = 0; i < nummerL || i == nummerL; i++){  
+
+            System.out.println("Enter the" + zaehler + " number");
+
+            if(input.hasNextDouble() == false){
+                break; 
+            }
+            else{
+                nummerL += 1;
+                number[i] = input.nextDouble();
+                zaehler++;
+            }
+        }
+
+
+        switch (operator) {
+            case '+': 
+                for(int i = 0; i < nummerL || i == nummerL;){
+                    result += array[i];
+                }
+                System.out.println("The result is " + result);
+                break;
+            
+                case '-':
+                result = number1 - number2;
+                System.out.println(number1 + " - " + number2 + " = " + result);
+                break;
+
+                case '*':
+                result = number1 * number2;
+                System.out.println(number1 + " * " + number2 + " = " + result);
+                break;
+
+                case '/':
+                result = number1 / number2;
+                System.out.println(number1 + " / " + number2 + " = " + result);
+                break;
+
+            default:
+            System.out.println("Invalid Operator");
+                break;
+        }
+        input.close();
+    }
+}
